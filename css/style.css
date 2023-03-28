@@ -153,67 +153,52 @@ main{
         color: #2a4;
     }
                                                             /*ENDS HOME*/
-                                                            /*EMPIEZA ALIMENTOS*/ 
- .contenedor-aa{
+                                                            /*EMPIEZA ALIMENTOS*/
+ .alimentos{
+    height: 200vh;
     display: flex;
-    margin-bottom: 50px;
-}                                                        
-.table{
-    font-weight: bolder;
-    text-align: center;
-    background-color:#424632;
-    color: #eee;
-}
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ }
 .alimento{
-    width: 60%;
-    height: 100%;
-    margin: auto;
-    background-color: #333;
-    border: 2px solid #000;
     display: flex;
-    flex-flow: column wrap;
-
-}
-    .alimento img{
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
-    .alimento a button{
-        width: 100%;
-        height: 25px;   
-        color: #2a4;
-        background-color: #333;
-        font-weight: bolder;
-    }
-    .alimento p{
-     display: flex;
-     text-align: center;
+    width: 80%;
+    height: 24%;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrp;
+    border: 1px solid #fff ;
+ }
+    .alimento .imgAlimento{
+        width: 25%;
 
     }
-    .alimento table{
-        width: 100%;
+        .alimento .imgAlimento img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    .alimento .infoAlimento{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 100%;
+        background-color: #111;
     }
-.titulo{
-    grid-area: title;
-    border: 2px solid #000;
-    width: 100%;
-    height: 1.5em;
-    line-height: 1.3em;
-
-}
-.table{
-    grid-area: tabla;
-}
-.img{
-    grid-area: img;
-}
-.parrafo{
-    grid-area: parrafo;
-}
-.comprar{
-    grid-area: comprar;
-}
+        .alimento .infoAlimento table{
+            width: 100%;
+            height: 100%;
+        }
+        .alimento .infoAlimento p{
+            color: #fff;
+            overflow:scroll;
+            height: fit-content;
+            background-color: #111;
+            text-align: center;
+        }
+        
+ 
 
                                                         /*ENDS ALIMENTOS*/
                                                         /*EMPIEZA GALERIA*/
