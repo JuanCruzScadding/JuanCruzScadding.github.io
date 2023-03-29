@@ -4,24 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--link a css bs-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+     <!--limk a mi css-->
     <link rel="stylesheet" href="../css/style.css">
     <title>Finca Don Juan</title>
     <link rel="shortcut icon" href="../img/1.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/e18cc0d570.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>nav prueba</title>
-        <script src="https://kit.fontawesome.com/e18cc0d570.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
-    
-    </head>
-    <body>
+                                                            <!--JS DE BOOSTRAP-->
+                                                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
                   <!--start header-->
        <div class="header">
             <nav>
@@ -39,22 +32,28 @@
             </div>
                   <!--ends header-->
                   <div class="linea"></div>
-                  <!--empieza main-->
-    <main>
                   <!--empieza espacio para consultas-->
-        <div>
-            <label for="consulta">Envianos tu consulta</label>
-            <textarea class="texto" name="consulta" id="consulta"></textarea>
-            <input type="submit" value="Enviar">
-            <img src="../img/clip.png" alt="adjuntar archivo">
-            <div class="telefono">123456789</div>
-        </div>
-                  <!--ends espacio para consultas-->
-                  <!--empieza mapa-->
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108681.43729953826!2d-68.72955468359375!3d-31.653150299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96813ecb894789ed%3A0x40f98d59d253604!2sINTA!5e0!3m2!1ses-419!2sar!4v1677186928511!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <main class="containerForm">
+        <form action="mailto:fincadonjuan@gmail.com" class="formulario mt-3 mb-3">  
+            <img src="../img/clip.png" alt="Enviar consulta" class="formImg">
 
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+          
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" class="btn boton" value="Enviar">
+          </form>
+          <iframe class="mb-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19213.358579913333!2d-68.58263774232793!3d-31.648248346275636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96813fd491a1d90b%3A0x3503d20548b4237d!2sINTA!5e0!3m2!1ses-419!2sar!4v1680120601519!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </iframe>
         </div>
+                </main>
+                            <!--ends espacio para consultas-->
+                            <!--empieza mapa-->
+                   
                   <!--ends mapa-->
     </main>
     <footer>
