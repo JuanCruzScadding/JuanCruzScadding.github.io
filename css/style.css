@@ -274,7 +274,7 @@ main{
     }
     .contenedorGaleria .item:nth-child(4){
         grid-row-start: span 3;
-        text-align: bottom;
+        text-align: justify;
     }
     .contenedorGaleria .item:nth-child(5){
         grid-column-start: span 2;
@@ -362,7 +362,7 @@ main{
     }
     .producto .containerData{
         width: 50%;
-        background: color #222421;;
+        background:#222421;
         justify-content: center;
         height: min-content;
         align-content: center;
@@ -371,10 +371,6 @@ main{
     .producto .containerData p{
        text-align: center;
     }
-        
-
-
-
 }
                             /*EMPIEZA CONTACTO*/
 .containerForm{
@@ -412,6 +408,11 @@ main{
             width: 50%;
             font-weight: bolder;
             color: #000;
+            background-color: #fff;
+        }
+        .containerForm .formulario textarea{
+            width: 400px;
+            height: 400px;
         }
         .containerForm .formulario .formImg{
             width: 10%;
@@ -422,3 +423,4 @@ main{
     display: flex;
     width: 80%;
 }        
+                                /*ENDS CONTACTO*/
