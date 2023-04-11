@@ -12,6 +12,8 @@ main{
 h2, h1{
     text-align: center;
     background-color: #111;
+    color: #fff;
+    line-height: 2.1em;
     margin: 0;
 }
 h3{
@@ -274,7 +276,7 @@ main{
     }
     .contenedorGaleria .item:nth-child(4){
         grid-row-start: span 3;
-        text-align: justify;
+        text-align: bottom;
     }
     .contenedorGaleria .item:nth-child(5){
         grid-column-start: span 2;
@@ -362,7 +364,7 @@ main{
     }
     .producto .containerData{
         width: 50%;
-        background:#222421;
+        background: color #222421;;
         justify-content: center;
         height: min-content;
         align-content: center;
@@ -371,6 +373,10 @@ main{
     .producto .containerData p{
        text-align: center;
     }
+        
+
+
+
 }
                             /*EMPIEZA CONTACTO*/
 .containerForm{
@@ -409,10 +415,7 @@ main{
             font-weight: bolder;
             color: #000;
             background-color: #fff;
-        }
-        .containerForm .formulario textarea{
-            width: 400px;
-            height: 400px;
+            max-height: 200px;
         }
         .containerForm .formulario .formImg{
             width: 10%;

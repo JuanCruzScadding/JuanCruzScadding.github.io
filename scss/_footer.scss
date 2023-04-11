@@ -1,0 +1,22 @@
+footer{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #111;
+        a{
+            text-decoration: none;
+            i{
+                padding: 20px;
+                margin: 5px;
+                color: #999;
+                    &:hover{
+                        color: #fff;
+                        transition: all .6s;
+                        transform: scale(1.3);
+                    }
+            }
+        }
+ }
