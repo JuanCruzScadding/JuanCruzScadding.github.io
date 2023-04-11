@@ -51,10 +51,11 @@ p {
   color: #274;
 }
 
-.header-index {
+.header-index, .header {
   width: 100%;
   height: 95vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../img/fondo-header.png);
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -64,15 +65,9 @@ p {
 }
 
 .header {
-  width: 100vw;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(../img/fondo-header.png);
+  background-attachment: scroll;
   background-size: contain;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  background-position: center;
+  height: 100%;
 }
 
 nav {
@@ -171,7 +166,7 @@ article .card .card-body {
   background: #222;
   box-shadow: 0px 0px 41px 20px rgba(0, 0, 0, 0.75);
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
   margin: 5em auto;
   height: 350px;
@@ -182,8 +177,12 @@ article .card .card-body {
   transition: all 0.3s;
 }
 
+.container {
+  padding: 0;
+}
+
 /* 	Detalles del producto  */
-.product-details {
+.infoAlimento {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -195,11 +194,11 @@ article .card .card-body {
   float: left;
   width: 50%;
 }
-.product-details p {
+.infoAlimento p {
   text-align: center;
   font-size: 1em;
 }
-.product-details h2 {
+.infoAlimento h2 {
   display: inline-block;
   background-color: #222;
   position: relative;
@@ -251,15 +250,20 @@ article .card .card-body {
   float: right;
   width: 50%;
 }
-
-.container img {
+.product-image img {
   display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
   padding: 0px;
-  border-radius: 7px;
   transition: all 1s;
+}
+.product-image:hover .info {
+  transform: translateX(0);
+}
+.product-image:hover img {
+  transition: all 0.3s ease-out;
+  transform: scale(2, 2);
 }
 
 .info {
@@ -279,25 +283,8 @@ article .card .card-body {
   left: 0;
   top: 0;
 }
-
-.info h2 {
-  text-align: center;
-}
-
-.product-image:hover .info {
-  transform: translateX(0);
-}
-
 .info ul li {
   transition: 0.3s ease;
-}
-
-.product-image:hover img {
-  transition: all 0.3s ease-out;
-}
-
-.product-image:hover img {
-  transform: scale(1.7, 1.7);
 }
 
 .containerForm {
@@ -376,64 +363,6 @@ article .card .card-body {
   grid-row-start: span 1;
 }
 
-@media (min-width: 700px) {
-  .contenedorGaleria {
-    display: grid;
-    grid-template-columns: 90vw;
-    grid-auto-rows: 200px;
-    padding: 20px;
-    grid-gap: 10px;
-    justify-content: center;
-  }
-  .contenedorGaleria .item {
-    display: flex;
-    grid-row-start: span 2;
-  }
-  .contenedorGaleria .item .foto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-@media (min-width: 1024px) {
-  .contenedorGaleria {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 150px;
-    padding: 20px;
-    grid-gap: 10px;
-  }
-  .contenedorGaleria .item {
-    display: flex;
-    grid-row-start: span 1;
-  }
-  .contenedorGaleria .item .foto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .contenedorGaleria .item:nth-child(3) {
-    grid-row-start: span 2;
-  }
-  .contenedorGaleria .item:nth-child(4) {
-    grid-row-start: span 3;
-    text-align: bottom;
-  }
-  .contenedorGaleria .item:nth-child(5) {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
-  }
-  .contenedorGaleria .item:nth-child(6) {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
-  }
-  .contenedorGaleria .item:nth-child(8) {
-    grid-column-start: span 2;
-  }
-  .contenedorGaleria .item:nth-child(9) {
-    grid-column-start: span 2;
-  }
-}
 .producto {
   display: flex;
   flex-flow: wrap;
@@ -584,12 +513,12 @@ footer a i:hover {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  .product-details {
+  .infoAlimento {
     justify-content: center;
     width: 100%;
     text-align: center;
   }
-  .product-details .information {
+  .infoAlimento .information {
     width: 100%;
   }
   .product-image {
@@ -609,6 +538,31 @@ footer a i:hover {
   .product-image:focus-visible img {
     transform: scale(1.7, 1.7);
   }
+}
+.errorbg {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(../img/fondoerror404.jpg);
+  height: 100vh;
+  object-fit: contain;
+}
+.errorbg .error {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  font-size: 3em;
+}
+.errorbg .error p {
+  background-color: rgba(50, 50, 50, 0.8);
+  text-align: center;
+}
+.errorbg .error a {
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(20, 20, 20);
 }
 
 /*# sourceMappingURL=main.css.map */

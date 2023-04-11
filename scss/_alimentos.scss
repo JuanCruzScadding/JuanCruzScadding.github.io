@@ -8,7 +8,7 @@
     background: #222;
     box-shadow: 0px 0px 41px 20px rgba(0,0,0,0.75);
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 3px;
 	overflow: hidden;
 	margin: 5em auto;
 	height: 350px;
@@ -17,9 +17,13 @@
             box-shadow: 0px 0px 65px 39px rgba(0,0,0,0.75);        
             transition: all .3s;
         }
+        
+}
+.container{
+    padding: 0;
 }
                             /* 	Detalles del producto  */
-.product-details {
+.infoAlimento {
 	position: relative;
     display: flex;
     flex-direction: column;
@@ -85,18 +89,22 @@
 	height: 100%;
 	float: right;
 	width: 50%;
+        img{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding: 0px;
+            transition: all 1s;
+        }
+        &:hover .info{
+            transform: translateX(0);
+        }
+        &:hover img{
+                transition: all 0.3s ease-out;
+                transform: scale(2, 2);
+        }
 }
-
-.container img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 0px;
-    border-radius: 7px;
-    transition: all 1s;
-}
-
 .info {
     display: flex;
     justify-content: center;
@@ -113,21 +121,9 @@
     width: 100%;
     left: 0;
     top: 0;
-}
-
-.info h2 {
-    text-align: center
-}
-.product-image:hover .info{
-    transform: translateX(0);
-}
-
-.info ul li{
-    transition: 0.3s ease;
-}
-.product-image:hover img {
-    transition: all 0.3s ease-out;
-}
-.product-image:hover img {
-    transform: scale(1.7, 1.7);
+        ul{
+            li{
+                    transition: 0.3s ease;
+            }
+        }
 }

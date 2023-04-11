@@ -5,6 +5,7 @@
     .contenedorGaleria{
         grid-auto-rows: 200px;
       }        
+      
       //PRODUCTOS
       .producto{
         justify-content:center;
@@ -83,7 +84,7 @@
         flex-direction: column;
         flex-wrap: nowrap;
     }
-    .product-details{
+    .infoAlimento{
         justify-content: center;
         width: 100%;
         text-align: center;

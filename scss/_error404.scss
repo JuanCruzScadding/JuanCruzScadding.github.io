@@ -1,0 +1,25 @@
+.errorbg{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../img/fondoerror404.jpg);
+    height: 100vh;
+    object-fit: contain;
+        .error{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            font-size: 3em;
+                p{
+                    background-color: rgba(50, 50, 50, .8);
+                    text-align: center;
+                }
+                a{
+                    color: #fff;
+                    text-align: center;
+                    font-weight: bolder;
+                    background-color: rgba(20, 20, 20, );
+                }
+        }
+}

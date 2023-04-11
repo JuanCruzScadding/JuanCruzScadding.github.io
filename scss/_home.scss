@@ -1,3 +1,8 @@
+@mixin dflex ($d, $j, $a){
+    display: $d;
+    justify-content: $j;
+    align-content: $a;
+}
 .inicio{
     position: fixed;
     z-index: 1;
@@ -18,9 +23,7 @@
                                                          /*INICIO DE SESION*/
 
 article{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include dflex(flex, center, center );
         .card{
             background-color: #111;
             text-align: center;
