@@ -2,34 +2,34 @@
     display: flex;
     flex-flow:wrap;
     justify-content: center;
-    width: 100%;
+    width: map-get($map: $anchos, $key: w-100);
     height: 85vh;
         .containerImg{
             display: flex;
-            width: 60% ;
+            width: map-get($map: $anchos, $key: w-60);
             height: min-content;
             margin-top: 10px;
                 img{
+                    @include wh-100;
                     display: flex;
-                    width: 100% ;
-                    border: 3px solid #424632;
+                    border: 3px solid map-get($map: $colores, $key:linea);
                 }
         }
         .containerData{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            width: 80%;
+            width:map-get($map: $anchos, $key: w-80);
                 .containerInfo{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     text-align: center;
-                    width: 100%;
+                    width:map-get($map: $anchos, $key: w-100);
                     height: min-content;
                         p{
                             text-align: center;
-                            width: 70%;
+                            width: map-get($map: $anchos, $key: w-70);
                         }
                 }
         }
@@ -38,15 +38,15 @@
             display: flex;
             flex-wrap: wrap;
                 label{
-                    color: #fff;
+                    color: map-get($map: $colores, $key: textColor );
 
                 }
                 input{
                     margin-bottom: 7px;
-                    width: 80%;
-                    background-color: #111;
+                    width: map-get($map: $anchos, $key: w-80);
+                    background-color: map-get($map: $colores, $key:darkbg);
                     border-radius: 8px;
-                    color: #fff;
+                    color:map-get($map: $colores, $key:textColor);
                 }
         }
 }

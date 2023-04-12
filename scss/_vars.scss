@@ -1,3 +1,41 @@
-$map: (
-    maincolor : #222
-)
+@mixin dflex ($d, $j, $a){
+    display: flex;
+    justify-content: $j;
+    align-content: $a;
+}
+@mixin wh-100 (){
+    height: 100%;
+    width: 100%;
+}
+//mapa de colores
+$colores:(
+    "inicio": #555,
+    "inicioHover":#2a8,
+    "main": #222,
+    "darkbg":#111,
+    "darktext":#000,
+    "cardstxt": #ccc,
+    "textColor":#fff,
+    "navHover": #2a4,
+    "linea": #424632,
+    "boton": #22592a,
+    "priceC":#333,
+    "cardOpacity":(rgba(27, 26, 26, 0.9))
+);
+$shadows:(
+    "sombraMuyLeve": 0 10px 10px  rgba(0, 0, 0,.2),
+    "sombraLeve": 0 16px 20px rgba(0, 0, 0,.4),
+    "sombraMedia":0px 0px 41px 20px rgba(0,0,0,0.75),
+    "sombraFuerte":0px 0px 65px 39px rgba(0,0,0,0.75),
+);
+$anchos:(
+    "w-100": 100%,
+    "w-80":80%,
+    "w-75":75%,
+    "w-60":60%,
+    "w-50":50%,
+    "w-10": 10%,
+    "w-fit": fit-content,
+
+);
+

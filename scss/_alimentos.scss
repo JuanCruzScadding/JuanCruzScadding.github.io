@@ -5,8 +5,8 @@
 }
 .alimento{
     display: flex;
-    background: #222;
-    box-shadow: 0px 0px 41px 20px rgba(0,0,0,0.75);
+    background: map-get($map: $colores, $key: main );
+    box-shadow: map-get($map: $shadows, $key: sombraMedia);
 	text-align: center;
 	border-radius: 3px;
 	overflow: hidden;
@@ -14,7 +14,7 @@
 	height: 350px;
 	width: 700px;
         &:hover{
-            box-shadow: 0px 0px 65px 39px rgba(0,0,0,0.75);        
+            box-shadow: map-get($map: $shadows, $key: sombraFuerte);        
             transition: all .3s;
         }
         
@@ -33,52 +33,49 @@
 	padding: 30px;
 	height: 100%;
 	float: left;
-	width: 50%;
+	width: map-get($map: $anchos, $key: w-50);
         p{
             text-align: center;
             font-size: 1em;
         }
         h2{
             display: inline-block;
-            background-color: #222;
+            background-color: map-get($map: $colores, $key:main );
             position: relative;
-            font-size:2em;
+            font-size: 2em;
             margin: 0;
         }
-}
-.btn{
-    span{
-        transition: transform 1s;
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 1.2em;
-        margin:0;
-    }
-    .price{
-        background: #333;
-        border: 0;
-        margin: 0;
-        transform: translateX(-10%); 
-        padding-right: 15px;
-    }
-    &:hover .price{
-        transform: translateX(-110%);
-        text-align: center;
-    }
 }
 .btnAlimento{
     transform: translateY(0px);
 	transition: 0.3s linear;
-	background: #22592a;
+	background: map-get($map: $colores, $key:boton );
 	border-radius: 5px;
     position: relative;
     overflow: hidden;
 	cursor: pointer;
 	outline: none;
 	border: none;
-	color: #eee;
     margin: 0;
     padding: 0;
+        span{
+            transition: transform 1s;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin:0;
+        }
+        .price{
+            background: map-get($map: $colores, $key: priceC );
+            border: 0;
+            margin: 0;
+            transform: translateX(-10%); 
+            padding-right: 15px;
+        }
+        &:hover .price{
+            transform: translateX(-110%);
+            text-align: center;
+        }
 }
 /* product image  */
 .product-image {
@@ -88,11 +85,10 @@
 	overflow: hidden;
 	height: 100%;
 	float: right;
-	width: 50%;
+	width: map-get($map: $anchos, $key:w-50 );
         img{
+            @include wh-100;
             display: flex;
-            width: 100%;
-            height: 100%;
             object-fit: cover;
             padding: 0px;
             transition: all 1s;
@@ -106,19 +102,18 @@
         }
 }
 .info {
+    @include wh-100;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(27, 26, 26, 0.9);
+    background: map-get($map: $colores, $key: cardOpacity );
     transition: all 0.3s ease-out;
     transform: translateX(-100%);
     position: absolute;
     line-height: 1.9;
     font-size: 120%;
     cursor: text;
-    color: #FFF;
-    height: 100%;
-    width: 100%;
+    color: map-get($map: $colores, $key:textColor );
     left: 0;
     top: 0;
         ul{

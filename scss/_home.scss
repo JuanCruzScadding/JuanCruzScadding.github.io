@@ -1,22 +1,17 @@
-@mixin dflex ($d, $j, $a){
-    display: $d;
-    justify-content: $j;
-    align-content: $a;
-}
 .inicio{
     position: fixed;
     z-index: 1;
-    background-color: #555;
-    width: 100%;
+    background-color: map-get($map: $colores, $key:inicio );
+    width: map-get($map: $anchos, $key: w-100);
     text-align: right;
         a{
             text-decoration: none;
-            color: #fff;
+            color: map-get($map: $colores, $key: textColor);
             margin-right: 10px;
             font-weight: bolder;
             transition: all 0.3s;
                 &:hover{
-                    color: #2a8;
+                    color: map-get($map: $colores, $key: inicioHover);
                 }
         }
 }                                   
@@ -25,19 +20,19 @@
 article{
     @include dflex(flex, center, center );
         .card{
-            background-color: #111;
+            background-color: map-get($map: $colores, $key: darkbg );
             text-align: center;
             height: auto;
             margin: 10px 10px;
-            box-shadow: 0 10px 10px  rgba(0, 0, 0,.2) ;
+            box-shadow:map-get($map: $shadows, $key: sombraMuyLeve);
                 &:hover{
-                    box-shadow: 0 16px 20px rgba(0, 0, 0,.4);
+                    box-shadow:map-get($map: $shadows, $key: sombraLeve);
                 }
                 h3{
-                    color:#ccc;
+                    color:map-get($map: $colores, $key: cardstxt );
                 }
                 img{
-                    width: 100%;
+                    width: map-get($map: $anchos, $key: w-100);
                     height: 100%;
                     object-fit: cover;
                 }
@@ -46,6 +41,11 @@ article{
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+                        .btnCard:hover{
+                            @extend .btn;
+                            transform: scale(1.1);
+                            transition: all .3s;
+                        }
                 }
         }
 }

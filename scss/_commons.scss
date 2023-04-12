@@ -7,39 +7,39 @@
     overflow-x: hidden;
 }
 main{
-    background-color: #222 ;
-}
-h2, h1{
-    text-align: center;
-    background-color: #111;
-    color: #fff;
-    line-height: 2.1em;
-    margin: 0;
+    background-color: map-get($map: $colores, $key:main ) ;
 }
 h3{
     text-align: center;
-    background-color: #111;
+    background-color: map-get($map: $colores, $key:darkbg );
 }
+h2, h1{
+    @extend h3;
+    color: map-get($map: $colores, $key: textColor );
+    line-height: 2.1em;
+    margin: 0;
+}
+
 p{
-    color: #fff;
+    color: map-get($map: $colores, $key: textColor );
     font-size: 1.1em;
     text-align: justify;
     line-height: 1.2em;
 }
 .linea{
-    border: 3px solid #424632;
+    border: 3px solid map-get($map: $colores, $key:linea);
 }
 .btn{
-    background-color: #333;
-    color: #fff;
+    background-color: map-get($map: $colores, $key:main);
+    color: map-get($map: $colores, $key: textColor);
     text-align: center;
     font-weight: bolder;
-    width: fit-content;
+    width: map-get($map: $anchos, $key: w-fit);
     display: flex;
     height: min-content;
+    transition: all .3s;
         &:hover{
-            border: 2px solid #fff;
-            background-color: #000;
-            color: #274;
+            background-color: map-get($map: $colores, $key: boton );
+            color: map-get($map: $colores, $key:textColor );
         }
 }
