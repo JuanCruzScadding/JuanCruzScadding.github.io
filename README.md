@@ -4,8 +4,6 @@ Testee todo en Firefox, Chrome (desktop y mobile) y Opera hasta en un ancho mini
 En cuanto al codigo, tuve algunas complicaciones para pasar mi css a sass, sobre todo para usar mixins y extends.
 Aun no he tenido tiempo para optimizar las imagenes y "alivianar" un poco el sitio, pero es mi idea de avance para la entrega final.
 
-Link al sitio hosteado en vercel: https://fincadonjuan.vercel.app/index.html
-
 Muchas gracias por el tiempo, espero tus comentarios y correciones. Saludos
 Link al sitio hosteado en vercel: https://fincadonjuan.vercel.app/index.html
 
